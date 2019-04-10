@@ -2,7 +2,8 @@
 import urllib.request
 import os
 import redis
-import pymysql.cursors
+import pymysql
+from scrapy.conf import settings
 
 class PicPipeline(object):
     def process_item(self, item, spider):
@@ -22,7 +23,6 @@ class PicPipeline(object):
                 charset='utf8',
                 use_unicode=True,
 	    )
-
-	    dbpool = pymysql.connect(**dbargs)
-	    return dbpool
+        dbpool = pymysql.connect(dbargs)
+        return dbpool
         # return item
