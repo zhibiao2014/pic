@@ -90,3 +90,9 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 ITEM_PIPELINES = {'pic.pipelines.PicPipeline':100}
 REDIS_URL = 'redis://127.0.0.1:6379'
+
+MYSQL_HOST = '127.0.0.1'				#Mysql连接名
+MYSQL_PORT = '3306'						#连接端口号
+MYSQL_USER = 'root'						#Mysql用户名
+MYSQL_PASS = '123456'					#Mysql用户密码
+MYSQL_DB = 'xinlian'					#Mysql数据库名
